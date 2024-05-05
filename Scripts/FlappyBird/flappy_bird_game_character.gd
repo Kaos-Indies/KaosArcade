@@ -14,9 +14,11 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	var screensize = get_viewport_rect().size
-	global_position = global_position.clamp(Vector2(0,0),screensize)
+	if (global_position.y > screensize.y):
+		on_hit()
+	#global_position = global_position.clamp(Vector2(0,0),screensize)
 
-func brick_hit():
+func on_hit():
 	emit_signal("hit")
 	print("hit")
 

@@ -18,3 +18,4 @@ position = Vector2(67, 355)
 z_index = 1
 
 [connection signal="hit" from="FlappyBirdGameCharacter" to="." method="_on_flappy_bird_game_character_hit"]
+[connection signal="column_spawned" from="Column" to="." method="_on_column_column_spawned"]

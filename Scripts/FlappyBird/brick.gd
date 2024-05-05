@@ -9,17 +9,14 @@ func _ready():
 
 func _physics_process(delta):
 	global_position.x -= speed*delta
-	print(global_position)
 
 func _on_screen_exited():
-	#emit_signal("brickVanished")
-	#queue_free()
-	pass
+	emit_signal("brickVanished")
+	queue_free()
 
 func _on_body_entered(body):
-	body.brick_hit()
+	body.on_hit()
 	
 func update_speed(new_speed):
 	self.speed += new_speed
-	print("yup")
 	
