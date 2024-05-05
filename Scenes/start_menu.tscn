@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8sqnuiex46gk"]
+
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_n0171"]
+[ext_resource type="PackedScene" uid="uid://bakad7k3pxgi" path="res://Scenes/ui_layer.tscn" id="2_mf7q5"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n0171")
+
+[node name="UILayer" parent="." instance=ExtResource("2_mf7q5")]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://8ql4r8f4p04o"]
+
+[ext_resource type="Script" path="res://Scripts/FlappyBird/column_spawner.gd" id="1_6qgeb"]
+
+[node name="Column" type="Node2D"]
+script = ExtResource("1_6qgeb")
+
+[node name="SpawnPosTop" type="Node2D" parent="."]
+position = Vector2(1021, 365)
+
+[node name="SmallTop" type="Marker2D" parent="SpawnPosTop"]
+position = Vector2(-2, -256)
+
+[node name="MediumTop" type="Marker2D" parent="SpawnPosTop"]
+position = Vector2(0, -104)
+
+[node name="LargeTop" type="Marker2D" parent="SpawnPosTop"]
+position = Vector2(4, 135)
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPosTop"]
+position = Vector2(4, 242)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

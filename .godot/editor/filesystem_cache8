@@ -1,0 +1,63 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1714912872
+::res://Assets/::1714845162
+icon.svg::CompressedTexture2D::3427848692711999267::1714834553::1714834627::1::::<><>::
+::res://Assets/BGs/::1714839298
+black.png::CompressedTexture2D::5259857523544839285::1714837024::1714839295::1::::<><>::
+darkPurple.png::CompressedTexture2D::8670010818735872661::1714837020::1714839295::1::::<><>::
+purple.png::CompressedTexture2D::9110263650678902315::1714837015::1714839295::1::::<><>::
+rm251-aum-01-a.jpg::CompressedTexture2D::7036816781889413301::1622471934::1714839298::1::::<><>::
+::res://Assets/CharacterSprites/::1714840603
+player_ship.png::CompressedTexture2D::4828499934191574991::1714840601::1714840603::1::::<><>::
+::res://Assets/fonts/::1714845663
+Kenney Pixel Square.ttf::FontFile::4663106476637104109::1714845120::1714845663::1::::<><>::
+::res://Assets/textures/::1714845166
+Terrain (16x16).png::CompressedTexture2D::2852560638421972502::1680408066::1714845166::1::::<><>::
+::res://Assets/textures/bg/::1714845166
+Blue.png::CompressedTexture2D::1468227016229142246::1680408004::1714845166::1::::<><>::
+Brown.png::CompressedTexture2D::2390776517353525079::1680408004::1714845166::1::::<><>::
+Gray.png::CompressedTexture2D::81745461219257923::1680408004::1714845166::1::::<><>::
+Green.png::CompressedTexture2D::1254926583812981603::1680408004::1714845166::1::::<><>::
+Pink.png::CompressedTexture2D::3067717597127622172::1680408004::1714845166::1::::<><>::
+Purple.png::CompressedTexture2D::5560617416216553793::1680408004::1714845166::1::::<><>::
+Yellow.png::CompressedTexture2D::7141530755260780503::1680408004::1714845166::1::::<><>::
+::res://Assets/textures/other/::1714845166
+End (Idle).png::CompressedTexture2D::3243172972374015545::1680408178::1714845166::1::::<><>::
+End (Pressed) (64x64).png::CompressedTexture2D::6160118492622644836::1680408178::1714845166::1::::<><>::
+Idle.png::CompressedTexture2D::3473691250113854658::1680408162::1714845166::1::::<><>::
+Jump (28x28).png::CompressedTexture2D::2861047800979797438::1680408162::1714845166::1::::<><>::
+Saw.png::CompressedTexture2D::7543093862162092713::1680408138::1714845166::1::::<><>::
+Spiked Ball.png::CompressedTexture2D::1312629479358128186::1680408152::1714845166::1::::<><>::
+Start.png::CompressedTexture2D::3472260992517504434::1680408178::1714845166::1::::<><>::
+::res://Assets/textures/player/::1714845166
+Fall (32x32).png::CompressedTexture2D::4631139128898451042::1680407982::1714845166::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::7043979158351743702::1680407982::1714845166::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::2445796016882553843::1680407982::1714845166::1::::<><>::
+Run (32x32).png::CompressedTexture2D::3017913435497205358::1680407982::1714845166::1::::<><>::
+::res://Scenes/::1714927886
+column.tscn::PackedScene::2349982503205746676::1714915517::0::1::::<><>::res://Scripts/FlappyBird/column_spawner.gd
+game_over.tscn::PackedScene::4905362060183704460::1714915517::0::1::::<><>::uid://b7o3xg3ln2hnp::::res://Assets/fonts/Kenney Pixel Square.ttf<>res://Scripts/game_over.gd
+global.tscn::PackedScene::1616891273508195869::1714928035::0::1::::<><>::res://Scripts/player_data.gd
+start_menu.tscn::PackedScene::7127227757258465322::1714915517::0::1::::<><>::res://Scripts/start_menu.gd<>uid://bakad7k3pxgi::::res://Scenes/ui_layer.tscn
+start_panel.tscn::PackedScene::6539272969392915737::1714915517::0::1::::<><>::uid://b7o3xg3ln2hnp::::res://Assets/fonts/Kenney Pixel Square.ttf<>res://Scripts/start_panel.gd
+ui_layer.tscn::PackedScene::70796221061876776::1714915517::0::1::::<><>::res://Scripts/UILayer.gd<>uid://cp084u7r2ynvj::::res://Scenes/FlappyBirdGame/flappy_bird_back_ground.tscn
+::res://Scenes/FlappyBirdGame/::1714915517
+brick.tscn::PackedScene::2048985301913270949::1714915517::0::1::::<><>::uid://bgv2i0bgghvfa::::res://Assets/textures/Terrain (16x16).png<>res://Scripts/FlappyBird/brick.gd
+column.tscn::PackedScene::-1::1714845474::0::1::::<><>::
+flappy_bird_back_ground.tscn::PackedScene::5879340015302904087::1714852583::0::1::::<><>::res://Scripts/back_ground.gd<>uid://c7ixlyaunqa4l::::res://Assets/BGs/rm251-aum-01-a.jpg
+flappy_bird_game.tscn::PackedScene::6507896446906131773::1714915517::0::1::::<><>::res://Scripts/FlappyBird/flappy_bird_game.gd<>uid://bakad7k3pxgi::::res://Scenes/ui_layer.tscn<>uid://ddtt7vfo10b0s::::res://Scenes/FlappyBirdGame/flappy_bird_game_character.tscn<>uid://8ql4r8f4p04o::::res://Scenes/column.tscn
+flappy_bird_game_character.tscn::PackedScene::7410263638974255952::1714915517::0::1::::<><>::uid://ca17xn4mrqx6f::::res://Assets/CharacterSprites/player_ship.png<>res://Scripts/FlappyBird/flappy_bird_game_character.gd
+hud.tscn::PackedScene::2099857908636120316::1714915517::0::1::::<><>::uid://b7o3xg3ln2hnp::::res://Assets/fonts/Kenney Pixel Square.ttf<>res://Scripts/FlappyBird/flappy_bird_game_hud.gd
+::res://Scripts/::1714927886
+back_ground.gd::GDScript::-1::1714852583::0::1::::<>ParallaxBackground<>::
+game_over.gd::GDScript::-1::1714911966::0::1::::<>PanelContainer<>::
+player_data.gd::GDScript::-1::1714927886::0::1::::<>Node<>::
+start_menu.gd::GDScript::-1::1714858559::0::1::::<>Control<>::
+start_panel.gd::GDScript::-1::1714912461::0::1::::<>PanelContainer<>::
+UILayer.gd::GDScript::-1::1714860812::0::1::::<>CanvasLayer<>::
+::res://Scripts/FlappyBird/::1714915513
+brick.gd::GDScript::-1::1714915513::0::1::::<>Area2D<>::
+column_spawner.gd::GDScript::-1::1714915375::0::1::::<>Node2D<>::
+flappy_bird_game.gd::GDScript::-1::1714915060::0::1::::<>Node2D<>::
+flappy_bird_game_character.gd::GDScript::-1::1714862771::0::1::::<>CharacterBody2D<>::
+flappy_bird_game_hud.gd::GDScript::-1::1714914208::0::1::::<>PanelContainer<>::

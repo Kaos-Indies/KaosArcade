@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xbh70jqikwbt"]
+
+[ext_resource type="Script" path="res://Scripts/game_data.gd" id="1_r6aip"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_r6aip")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

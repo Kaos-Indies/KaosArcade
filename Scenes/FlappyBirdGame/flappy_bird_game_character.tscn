@@ -1,0 +1,90 @@
+[gd_scene load_steps=17 format=3 uid="uid://ddtt7vfo10b0s"]
+
+[ext_resource type="Texture2D" uid="uid://ca17xn4mrqx6f" path="res://Assets/CharacterSprites/player_ship.png" id="1_b8tn7"]
+[ext_resource type="Script" path="res://Scripts/FlappyBird/flappy_bird_game_character.gd" id="1_hk5qs"]
+
+[sub_resource type="Curve" id="Curve_6r2qm"]
+_data = [Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_2ve6b"]
+texture_mode = 1
+curve = SubResource("Curve_6r2qm")
+
+[sub_resource type="Curve" id="Curve_mkpif"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0.653333, -360), 0.0, 0.0, 0, 0, Vector2(0.933333, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1ragl"]
+curve = SubResource("Curve_mkpif")
+
+[sub_resource type="Gradient" id="Gradient_qgjco"]
+offsets = PackedFloat32Array(0, 0.721311, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.91, 0.4095, 0, 0.737255, 0.95, 0.6175, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_elwa4"]
+gradient = SubResource("Gradient_qgjco")
+
+[sub_resource type="Gradient" id="Gradient_syhnq"]
+offsets = PackedFloat32Array(0, 0.319672, 0.491803, 0.614754, 0.778689, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.311475, 0.134973, 0, 1, 0.491803, 0.213115, 0, 1, 0.614754, 0.266393, 0, 1, 0.778689, 0.337432, 0, 1, 1, 0.433333, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w1d6k"]
+gradient = SubResource("Gradient_syhnq")
+
+[sub_resource type="Curve" id="Curve_echhh"]
+_data = [Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_djfxd"]
+curve = SubResource("Curve_echhh")
+
+[sub_resource type="Curve" id="Curve_gb5c0"]
+min_value = -1.0
+_data = [Vector2(0.46, -0.142857), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8n1gt"]
+curve = SubResource("Curve_gb5c0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_djbgd"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 90.0
+angle_min = -90.0
+angle_max = 90.0
+angle_curve = SubResource("CurveTexture_1ragl")
+gravity = Vector3(0, 98, 0)
+color = Color(1, 0.00999999, 0.00999999, 1)
+color_ramp = SubResource("GradientTexture1D_w1d6k")
+color_initial_ramp = SubResource("GradientTexture1D_elwa4")
+alpha_curve = SubResource("CurveTexture_2ve6b")
+emission_curve = SubResource("CurveTexture_djfxd")
+hue_variation_curve = SubResource("CurveTexture_8n1gt")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_prqcb"]
+radius = 51.0
+height = 112.0
+
+[node name="FlappyBirdGameCharacter" type="CharacterBody2D"]
+position = Vector2(1, -50)
+scale = Vector2(0.5, 0.462)
+collision_layer = 2
+script = ExtResource("1_hk5qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.241736, 0.283026)
+texture = ExtResource("1_b8tn7")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D"]
+position = Vector2(0, 168.25)
+emitting = false
+amount = 8000
+process_material = SubResource("ParticleProcessMaterial_djbgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_prqcb")

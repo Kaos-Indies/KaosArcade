@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://4gsqu1pagl0x"]
+
+[ext_resource type="Texture2D" uid="uid://bgv2i0bgghvfa" path="res://Assets/textures/Terrain (16x16).png" id="1_0k4hq"]
+[ext_resource type="Script" path="res://Scripts/FlappyBird/brick.gd" id="1_nh7ru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kp8n"]
+size = Vector2(46.3132, 44.9556)
+
+[node name="Brick" type="Area2D" groups=["Columns"]]
+z_index = 5
+position = Vector2(0, -23)
+scale = Vector2(-3.8319, 12.3046)
+collision_mask = 2
+script = ExtResource("1_nh7ru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.130827, 0.0588713)
+scale = Vector2(1, 1.01884)
+shape = SubResource("RectangleShape2D_6kp8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.280045)
+scale = Vector2(1, 0.988083)
+texture = ExtResource("1_0k4hq")
+region_enabled = true
+region_rect = Rect2(272, 64, 47.7024, 47.1006)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-0.665018, 59.7329)
+scale = Vector2(1, 1.01884)
+shape = SubResource("RectangleShape2D_6kp8n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-0.795846, 59.9541)
+scale = Vector2(1, 0.988083)
+texture = ExtResource("1_0k4hq")
+region_enabled = true
+region_rect = Rect2(272, 64, 47.7024, 47.1006)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-23.5491, -0.117744)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

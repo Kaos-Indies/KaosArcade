@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyyqdr3pibb7r"]
+
+[ext_resource type="Script" path="res://Scripts/FlappyBird/flappy_bird_game.gd" id="1_3wj4v"]
+[ext_resource type="PackedScene" uid="uid://bakad7k3pxgi" path="res://Scenes/ui_layer.tscn" id="2_gugq3"]
+[ext_resource type="PackedScene" uid="uid://ddtt7vfo10b0s" path="res://Scenes/FlappyBirdGame/flappy_bird_game_character.tscn" id="2_r50qi"]
+[ext_resource type="PackedScene" uid="uid://8ql4r8f4p04o" path="res://Scenes/column.tscn" id="4_tnddj"]
+
+[node name="FlappyBirdGame" type="Node2D" groups=["Columns"]]
+script = ExtResource("1_3wj4v")
+
+[node name="UILayer" parent="." instance=ExtResource("2_gugq3")]
+
+[node name="FlappyBirdGameCharacter" parent="." instance=ExtResource("2_r50qi")]
+position = Vector2(67, 355)
+
+[node name="Column" parent="." instance=ExtResource("4_tnddj")]
+z_index = 1
+
+[connection signal="hit" from="FlappyBirdGameCharacter" to="." method="_on_flappy_bird_game_character_hit"]
+[connection signal="bot_column_spawned" from="Column" to="." method="_on_column_bot_column_spawned"]
+[connection signal="top_column_spawned" from="Column" to="." method="_on_column_top_column_spawned"]

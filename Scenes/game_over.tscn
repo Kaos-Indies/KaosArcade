@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb5gujq3c226k"]
+
+[ext_resource type="FontFile" uid="uid://b7o3xg3ln2hnp" path="res://Assets/fonts/Kenney Pixel Square.ttf" id="1_y7dcb"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="2_7gpgw"]
+
+[sub_resource type="Theme" id="Theme_0h5os"]
+default_font = ExtResource("1_y7dcb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1fx1"]
+bg_color = Color(0.191253, 0.0928, 0.32, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x30yp"]
+font = ExtResource("1_y7dcb")
+font_size = 45
+font_color = Color(1, 0.24, 0.24, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nibf"]
+font = ExtResource("1_y7dcb")
+font_size = 45
+
+[node name="GameOver" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -156.0
+offset_right = 229.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0h5os")
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1fx1")
+script = ExtResource("2_7gpgw")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+text = "Score: 9999"
+label_settings = SubResource("LabelSettings_x30yp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Return to Menu"
+
+[node name="HighScore" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "HIGH SCORE: 9999"
+label_settings = SubResource("LabelSettings_6nibf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Retry"
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

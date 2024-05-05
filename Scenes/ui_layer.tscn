@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bakad7k3pxgi"]
+
+[ext_resource type="Script" path="res://Scripts/UILayer.gd" id="1_h5u6c"]
+[ext_resource type="PackedScene" uid="uid://cp084u7r2ynvj" path="res://Scenes/FlappyBirdGame/flappy_bird_back_ground.tscn" id="2_8lc3x"]
+
+[node name="UILayer" type="CanvasLayer"]
+script = ExtResource("1_h5u6c")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_8lc3x")]

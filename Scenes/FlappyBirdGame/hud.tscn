@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://46gmaa3biyga"]
+
+[ext_resource type="FontFile" uid="uid://b7o3xg3ln2hnp" path="res://Assets/fonts/Kenney Pixel Square.ttf" id="1_l1gnw"]
+[ext_resource type="Script" path="res://Scripts/FlappyBird/flappy_bird_game_hud.gd" id="1_nq3mb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmc8v"]
+font = ExtResource("1_l1gnw")
+font_size = 36
+
+[node name="hud" type="PanelContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.5
+offset_right = 130.5
+offset_bottom = 54.0
+grow_horizontal = 2
+script = ExtResource("1_nq3mb")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 2
+text = "Score: 9999"
+label_settings = SubResource("LabelSettings_hmc8v")
