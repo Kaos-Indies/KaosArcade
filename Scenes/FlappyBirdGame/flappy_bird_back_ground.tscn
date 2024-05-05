@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ixlyaunqa4l" path="res://Assets/BGs/rm251-aum-01-a.jpg" id="2_0s8vd"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+follow_viewport_enabled = true
 script = ExtResource("1_6hsph")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]

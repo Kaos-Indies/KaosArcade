@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://xbh70jqikwbt"]
+[gd_scene load_steps=3 format=3 uid="uid://xbh70jqikwbt"]
 
 [ext_resource type="Script" path="res://Scripts/game_data.gd" id="1_r6aip"]
+[ext_resource type="AudioStream" uid="uid://blp4tb4ahokkf" path="res://Assets/Audio/fsm-team-escp-galactic-groove.mp3" id="2_13xsk"]
 
 [node name="Global" type="Node"]
 script = ExtResource("1_r6aip")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_13xsk")
 autoplay = true
