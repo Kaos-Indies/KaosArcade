@@ -21,6 +21,7 @@ func _ready():
 	else:
 		sprite.texture = bg_texture_3
 
+
 func _process(delta):
 	if (Global.current_scene.get_name() == "FlappyBirdGame"):
 		sprite.region_rect.position += delta*Vector2(scroll_speed,0)
@@ -30,4 +31,4 @@ func _process(delta):
 		start_sprite.region_rect.position += delta*Vector2(scroll_speed,0)
 		if start_sprite.region_rect.position >= Vector2(5000,0):
 			start_sprite.region_rect.position = Vector2.ZERO
-	pass
+

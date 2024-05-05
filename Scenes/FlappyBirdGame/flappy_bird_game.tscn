@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://8ql4r8f4p04o" path="res://Scenes/column.tscn" id="4_tnddj"]
 
 [node name="FlappyBirdGame" type="Node2D" groups=["Columns"]]
+z_index = -1
 script = ExtResource("1_3wj4v")
 
 [node name="UILayer" parent="." instance=ExtResource("2_gugq3")]
@@ -17,5 +18,3 @@ position = Vector2(67, 355)
 z_index = 1
 
 [connection signal="hit" from="FlappyBirdGameCharacter" to="." method="_on_flappy_bird_game_character_hit"]
-[connection signal="bot_column_spawned" from="Column" to="." method="_on_column_bot_column_spawned"]
-[connection signal="top_column_spawned" from="Column" to="." method="_on_column_top_column_spawned"]

@@ -80,6 +80,7 @@ scale = Vector2(0.241736, 0.283026)
 texture = ExtResource("1_b8tn7")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D"]
+z_index = 5
 position = Vector2(0, 168.25)
 emitting = false
 amount = 8000
